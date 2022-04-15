@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        function add(){
+            let a,b,c;
+            a=60;
+            b=40;
+            c=a+b;
+            document.getElementById('add').innerHTML="Result is "+c;
+        }
+        function sub(){
+            let a,b,c;
+            a=60;
+            b=40;
+            c=a-b;
+            document.getElementById('sub').innerHTML="Result is "+c;
+        }
+        function mul(){
+            let a,b,c;
+            a=60;
+            b=40;
+            c=a*b;
+            document.getElementById('mul').innerHTML="Result is "+c;
+        }
+        function div(){
+            let a,b,c;
+            a=60;
+            b=40;
+            c=a/b;
+            document.getElementById('div').innerHTML="Result is "+c;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Addition</h1>
+    <p id="add"></p>
+    <button type="button" onclick="add()">Add</button>
+    <h1>Substraction</h1>
+    <p id="sub"></p>
+    <button type="button" onclick="sub()">Subtract</button>
+    <h1>Multiplication</h1>
+    <p id="mul"></p>
+    <button type="button" onclick="mul()">Multiply</button>
+    <h1>Division</h1>
+    <p id="div"></p>
+    <button type="button" onclick="div()">Division</button>
+</body>
+</html>

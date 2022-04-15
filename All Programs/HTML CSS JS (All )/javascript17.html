@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1>Program for If Statement</h1>
+    <p>I want to display something using if else</p>
+    <p id="demo"></p>
+    <script>
+        const minute =new Date().getMinutes();
+        let a;
+        if (minute < 10)
+        {
+            a="hi the minute is less then 10";
+        }
+        else if(minute <18)
+        {
+            a="hello the minute is less than 18";
+        }
+        else if(minute <26)
+        {
+            a="hello the minute is less than 26";
+        }
+        else
+        {
+            a="hello the minute is greater than 26";
+        }
+         document.getElementById("demo").innerHTML=a;
+    </script>
+</body>
+</html>

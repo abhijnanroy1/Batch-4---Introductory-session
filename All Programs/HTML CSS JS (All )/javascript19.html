@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Program for If Statement</h1>
+        <p>i want to display something using if else</p>
+        <p id="demo"></p>
+        <script>
+            const pet = "cat";
+ 
+            switch (pet) {
+              case "cow":
+                console.log("I own a cow");
+                break;
+              case "dog":
+                console.log("I own a dog");
+                break;
+              case "cat":
+                console.log("I own a cat");
+                break;
+              case "goat":
+                console.log("I own a goat");
+                break;
+              case "parrot":
+                console.log("I own a parrot");
+                break;
+              default:
+                console.log("I don't own a pet");
+                break;
+            }
+            document.getElementById("demo").innerHTML=pet;
+        </script>

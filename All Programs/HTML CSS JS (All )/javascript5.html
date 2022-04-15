@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            .first{
+                background: greenyellow;
+                font-size: large;
+                margin-top: 80px;
+                margin-right: 350px;
+                margin-left: 500px;
+               
+            }
+            
+        </style>
+    </head>
+    <body background="2.png">
+        <div class="first">
+        <img id="myimage" onclick="changeimage()" src="cricket.jpg" width="670" height="350">
+        <script>
+            function changeimage()
+            {
+                 var image=document.getElementById('myimage');
+                 if(image.src.match("cricket.jpg"))
+                 {
+                     image.src="football.jpg";
+
+                 }
+                 else{
+                     image.src="cricket.jpg";
+                 }
+            }
+        </script>
+    </div>
+    </body>
+</html>
