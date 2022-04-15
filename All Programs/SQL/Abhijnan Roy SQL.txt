@@ -1,0 +1,49 @@
+Write an SQL query to fetch duplicate records from EmployeeDetails.
+
+Write an SQL query to fetch only odd rows from the table.
+
+Write a query to find the 3rd highest salary from a table without top or limit keyword.
+
+
+
+.....................................................................................................................
+
+CREATE TABLE EmployeeDetails (
+  EmpId int,
+  FullName varchar(255),
+  ManagerId int,
+  DateOfJoining Date,
+  City varchar(225)
+);
+INSERT INTO EmployeeDetails (EmpId , FullName , ManagerId, DateOfJoining,City) VALUES (121, "John Snow",321, "2014-01-31","Toronto");
+INSERT INTO EmployeeDetails (EmpId , FullName , ManagerId, DateOfJoining,City) VALUES (321, 'Walter White',986, '2015-01-30','California');
+INSERT INTO EmployeeDetails (EmpId , FullName , ManagerId, DateOfJoining,City) VALUES (421, 'Kuldeep Rana',876, '2016-11-27','New Delhi');
+
+CREATE TABLE EmployeeSalary (
+  EmpId int,
+  Project varchar(255),
+  Salary int,
+  Variable int
+);
+INSERT INTO EmployeeSalary (EmpId , Project, Salary, Variable) VALUES (121, "P1",8000, 500);
+INSERT INTO EmployeeSalary (EmpId , Project, Salary, Variable) VALUES (321, "P2",10000, 1000);
+INSERT INTO EmployeeSalary (EmpId , Project, Salary, Variable) VALUES (421, "P1",12000, 0);
+
+SELECT * FROM EmployeeDetails ;
+SELECT * FROM EmployeeSalary ;
+
+select EmpId , FullName , ManagerId, DateOfJoining,City, count(*)
+from EmployeeDetails
+group by EmpId , FullName , ManagerId, DateOfJoining,City
+having count(*) >1 ;
+
+Select * from EmployeeDetails where EmpId % 2 != 0 ;
+
+SELECT Max(salary) 
+FROM   EmployeeSalary 
+WHERE  Salary < (SELECT Max(Salary) 
+                 FROM  EmployeeSalary
+                 WHERE  salary NOT IN(SELECT Max(Salary) 
+                                      FROM   EmployeeSalary)) 
+
+
